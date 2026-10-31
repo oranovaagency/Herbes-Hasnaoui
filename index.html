@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Herbes &amp; Épices Hasnaoui · Liens</title>
+  <meta name="description" content="Herbes &amp; Épices Hasnaoui à Bir El Djir, Oran : épices, herbes, mélanges naturels, miel naturel, graines et fruits secs. Commande WhatsApp, appel, itinéraire.">
+  <meta name="theme-color" content="#1b1411">
+  <meta property="og:title" content="Herbes &amp; Épices Hasnaoui · Bir El Djir, Oran">
+  <meta property="og:description" content="Épices, herbes, miel naturel et fruits secs. Commandez en un message.">
+  <meta property="og:image" content="img/boutique.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1411'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23e3a63c'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@500;600;700;800&family=Aref+Ruqaa:wght@700&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Colours from the shop: dark wood sign, paprika-red emblem, saffron, cream lettering */
+    :root {
+      --bg: #1b1411; --card: #261c18; --card-2: #30241f; --line: rgba(243,233,216,.1);
+      --text: #f3e9d8; --muted: rgba(243,233,216,.64); --paprika: #c9452f; --paprika-2: #dc5a42; --saffron: #e3a63c;
+      --display: "Fraunces", Georgia, serif; --body: "Inter", system-ui, sans-serif; --calli: "Aref Ruqaa", "IBM Plex Sans Arabic", serif;
+      --ease: cubic-bezier(.16, 1, .3, 1);
+    }
+    :root[dir="rtl"] { --display: "IBM Plex Sans Arabic", sans-serif; --body: "IBM Plex Sans Arabic", sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { color-scheme: dark; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(227,166,60,.2); }
+    body { margin: 0; min-height: 100svh; background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+    a, button { touch-action: manipulation; }
+    img, svg { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; border-radius: 8px; }
+    .nums { font-variant-numeric: tabular-nums; unicode-bidi: isolate; direction: ltr; }
+    [dir="rtl"] .flip { transform: scaleX(-1); }
+
+    /* background: a tall dark gradient (wood brown, paprika, saffron umber, olive, plum) that slides as you scroll.
+       The script sets --s from 0 (top of the page) to 1 (bottom). */
+    .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden;
+          background: linear-gradient(180deg, #1b1411 0%, #3a1610 24%, #2f1f0b 48%, #1a2012 72%, #2a1420 100%);
+          background-size: 100% 500%; background-position: 50% calc(var(--s, 0) * 100%); }
+    .bg::before, .bg::after { content: ""; position: absolute; width: 70vmax; height: 70vmax; border-radius: 50%; will-change: transform; }
+    .bg::before { left: -25vmax; top: -30vmax; background: radial-gradient(closest-side, rgba(227,166,60,.2), transparent);
+                  transform: translate(calc(var(--s, 0) * 30vw), calc(var(--s, 0) * 60vh)); }
+    .bg::after { right: -30vmax; bottom: -35vmax; background: radial-gradient(closest-side, rgba(201,69,47,.3), transparent);
+                 transform: translate(calc(var(--s, 0) * -25vw), calc(var(--s, 0) * -55vh)); }
+
+    /* overflow-x: clip keeps the photo that flies out from widening the page, which made phones jump back up */
+    .page { width: min(100%, 520px); margin-inline: auto; overflow-x: clip; padding: max(18px, env(safe-area-inset-top)) 18px calc(40px + env(safe-area-inset-bottom)); }
+
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .pill, .ghost { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(38,28,24,.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-weight: 700; font-size: 14px; }
+    .pill svg { width: 16px; height: 16px; color: var(--saffron); }
+    .ghost { transition: border-color .2s, background-color .2s; }
+    .ghost:hover { border-color: rgba(243,233,216,.35); background: var(--card-2); }
+    .ghost svg { width: 18px; height: 18px; }
+    .lang-btn { font-family: "IBM Plex Sans Arabic", var(--body); }
+
+    /* wordmark: small saffron kicker, the name in a warm serif, the Arabic name in ruqaa calligraphy like the shop sign */
+    .who { text-align: center; margin: 26px 0 22px; }
+    .mark { margin: 0; display: grid; justify-items: center; gap: 2px; }
+    .mark__kicker { font: 700 12px/1 var(--body); letter-spacing: .34em; padding-left: .34em; text-transform: uppercase; color: var(--saffron); }
+    .mark__name { font: 600 54px/1 "Fraunces", Georgia, serif; font-variation-settings: "opsz" 144; letter-spacing: -.01em; margin-top: 8px; }
+    .mark__ar { font: 700 30px/1.3 var(--calli); color: var(--paprika-2); direction: rtl; }
+    .rule { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--saffron); width: 180px; margin: 12px auto 0; }
+    .rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .55; }
+    .rule svg { width: 14px; height: 14px; flex: none; }
+    .tagline { margin: 12px 0 0; color: var(--muted); font-weight: 600; font-size: 15px; }
+
+    /* photo deck: the front card slides away and tucks in at the back */
+    .deck-wrap { position: relative; padding: 8px 10px 0; }
+    .deck { position: relative; aspect-ratio: 4 / 5; margin-inline: 6px; cursor: pointer; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+    .card { --p: 0; --r: 0deg; position: absolute; inset: 0; margin: 0; border-radius: 22px; overflow: hidden; background: var(--card); color: #fff8ef; box-shadow: 0 24px 50px -24px rgba(0,0,0,.85), 0 0 0 1px rgba(243,233,216,.06);
+            transform: translate(calc(var(--p) * 9px), calc(var(--p) * -11px)) rotate(var(--r)) scale(calc(1 - var(--p) * .045));
+            transition: transform .7s var(--ease), opacity .5s, filter .5s; will-change: transform; }
+    .card[data-p="1"] { --r: 4deg; } .card[data-p="2"] { --r: -3.5deg; }
+    .card:not([data-p="0"]) { filter: brightness(.62); }
+    .card[data-p="3"], .card[data-p="4"], .card[data-p="5"], .card[data-p="6"] { opacity: 0; }
+    .card.is-out { transform: translate(118%, -4%) rotate(14deg); transition: transform .42s cubic-bezier(.5, 0, .75, 0), filter .3s; }
+    .card.is-out-left { transform: translate(-118%, -4%) rotate(-14deg); }
+    .card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .card figcaption { position: absolute; inset-inline: 0; bottom: 0; padding: 60px 18px 18px; background: linear-gradient(transparent, rgba(0,0,0,.82)); }
+    .card figcaption b { display: block; font: 600 26px/1.05 var(--display); }
+    [dir="rtl"] .card figcaption b { font-size: 22px; font-weight: 700; line-height: 1.35; }
+    .card figcaption span { font-size: 14px; font-weight: 600; color: rgba(243,233,216,.82); }
+    .deck-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-inline: 6px; }
+    .dots { display: flex; gap: 6px; }
+    .dots i { width: 7px; height: 7px; border-radius: 99px; background: rgba(243,233,216,.22); transition: width .4s var(--ease), background-color .3s; }
+    .dots i.is-on { width: 22px; background: var(--saffron); }
+    .shuffle { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); font-weight: 700; font-size: 14px; transition: border-color .2s, background-color .2s; }
+    .shuffle:hover { border-color: rgba(227,166,60,.6); background: var(--card-2); }
+    .shuffle svg { width: 17px; height: 17px; color: var(--saffron); }
+
+    /* two rows of four round icons */
+    .social { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 240px; margin: 24px auto 26px; }
+    .social a { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--card); border: 1px solid var(--line); color: var(--saffron); transition: transform .25s var(--ease), background-color .2s, border-color .2s, color .2s; }
+    .social a:hover { transform: translateY(-3px); background: var(--saffron); border-color: var(--saffron); color: var(--bg); }
+    .social svg { width: 21px; height: 21px; }
+
+    .links { display: grid; gap: 12px; }
+    .link { position: relative; display: flex; align-items: center; gap: 14px; min-height: 66px; padding: 10px 16px 10px 10px; border-radius: 16px; background: rgba(38,28,24,.82); border: 1px solid var(--line); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); overflow: hidden; transition: transform .2s var(--ease), border-color .2s, background-color .2s; }
+    [dir="rtl"] .link { padding: 10px 10px 10px 16px; }
+    .link:hover { border-color: rgba(227,166,60,.6); background: var(--card-2); transform: translateY(-2px); }
+    .link:active { transform: scale(.98); }
+    .link::after { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.1), transparent); transform: skewX(-20deg); transition: left .7s var(--ease); pointer-events: none; }
+    .link:hover::after { left: 130%; }
+    .ico { flex: none; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; background: var(--card-2); color: var(--saffron); }
+    /* social networks keep their own colours */
+    .link--ig .ico { background: linear-gradient(45deg, #feda75, #fa7e1e 30%, #d62976 60%, #962fbf); color: #fff; }
+    .link--fb .ico { background: #1877f2; color: #fff; }
+    .link--tt .ico { background: #111; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.16); }
+    .link--sc .ico { background: #fffc00; color: #111; }
+    .ico svg { width: 22px; height: 22px; }
+    .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.25; }
+    .txt b { font-weight: 700; font-size: 17px; }
+    .txt small { color: var(--muted); font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .go { flex: none; width: 20px; height: 20px; color: var(--muted); transition: transform .25s var(--ease), color .2s; }
+    .link:hover .go { color: var(--saffron); transform: translateX(3px); }
+    [dir="rtl"] .link:hover .go { transform: scaleX(-1) translateX(3px); }
+
+    /* primary: leave a review, in the emblem's paprika red */
+    .link--main { min-height: 76px; background: var(--paprika); border-color: var(--paprika); color: #fff8ef; }
+    .link--main .ico { background: rgba(0,0,0,.16); color: #fff8ef; }
+    .link--main .txt b { font-size: 18px; }
+    .link--main .txt small { color: rgba(255,248,239,.82); }
+    .link--main .go { color: #fff8ef; }
+    .link--main:hover { background: var(--paprika-2); border-color: var(--paprika-2); box-shadow: 0 14px 40px -12px rgba(201,69,47,.7); }
+    .link--main:hover .go { color: #fff8ef; }
+
+    .link--review .stars { display: flex; gap: 2px; margin-top: 3px; color: var(--saffron); }
+    .link--main.link--review .stars { color: #ffd27a; }
+    .link--review .stars svg { width: 15px; height: 15px; }
+
+    /* what the shop sells: four photo tiles, each opens WhatsApp about that shelf */
+    .shelves-h { margin: 6px 0 0; font: 600 22px/1.2 var(--display); }
+    [dir="rtl"] .shelves-h { font-weight: 700; }
+    .shelves { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .shelf { position: relative; display: block; aspect-ratio: 1; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); color: #fff8ef; isolation: isolate; }
+    .shelf img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1s var(--ease); }
+    .shelf::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.05) 25%, rgba(0,0,0,.9)); }
+    .shelf:hover img { transform: scale(1.06); }
+    .shelf div { position: absolute; inset-inline: 0; bottom: 0; padding: 12px 14px; }
+    .shelf h3 { margin: 0; font: 600 20px/1.1 var(--display); }
+    [dir="rtl"] .shelf h3 { font-weight: 700; font-size: 18px; line-height: 1.35; }
+    .shelf p { margin: 2px 0 0; font-size: 13px; font-weight: 600; color: rgba(243,233,216,.8); }
+
+    .tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
+    .tool { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 6px; border-radius: 14px; background: rgba(38,28,24,.82); border: 1px solid var(--line); font-weight: 700; font-size: 14px; text-align: center; transition: border-color .2s, background-color .2s, transform .2s var(--ease); }
+    .tool:hover { border-color: rgba(227,166,60,.6); background: var(--card-2); transform: translateY(-2px); }
+    .tool svg { width: 24px; height: 24px; color: var(--saffron); }
+    .qr { margin-top: 12px; padding: 18px; border-radius: 16px; background: #fff; color: var(--bg); text-align: center; }
+    .qr[hidden] { display: none; }
+    .qr__code { display: grid; place-items: center; min-height: 220px; }
+    .qr__code img, .qr__code canvas { width: 220px !important; height: 220px !important; image-rendering: pixelated; }
+    .qr p { margin: 10px 0 0; font-weight: 700; font-size: 14px; }
+
+    .foot { margin-top: 30px; text-align: center; color: var(--muted); font-size: 14px; }
+    .credit { display: flex; justify-content: center; margin: 18px 0 0; }
+    .credit span { display: inline-flex; align-items: center; gap: 10px; padding: 7px 0; color: rgba(243,233,216,.55); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; line-height: 1; }
+    .credit img { width: 76px; height: auto; }
+    .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); z-index: 10; padding: 12px 18px; border-radius: 999px; background: var(--text); color: var(--bg); font-weight: 800; font-size: 14px; transform: translate(-50%, calc(100% + 60px)); visibility: hidden; transition: transform .45s var(--ease), visibility 0s .45s; }
+    .toast.is-on { transform: translate(-50%, 0); visibility: visible; transition: transform .45s var(--ease); }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .in { opacity: 0; transform: translateY(18px); animation: rise .8s var(--ease) forwards; animation-delay: calc(var(--i, 0) * 70ms + 80ms); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    /* computer: name and photos on the left (stay in view), links on the right */
+    @media (min-width: 960px) {
+      .page { width: min(100%, 1120px); display: grid; grid-template-columns: minmax(360px, 430px) minmax(0, 1fr); gap: 64px; align-items: start; padding: 40px 40px 56px; }
+      .side { position: sticky; top: 32px; }
+      .deck { aspect-ratio: 5 / 5.4; }
+      .main { padding-top: 66px; }
+      .links { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .links > .link--main, .links > .shelves-h, .links > .shelves { grid-column: 1 / -1; }
+      .shelf { aspect-ratio: 16 / 10; }
+      .foot { text-align: start; }
+      .credit { justify-content: flex-start; }
+    }
+  </style>
+  <script>try { if (localStorage.getItem('hh-lang') === 'ar') { document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; } } catch (e) {}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.5 2.5 0 1 0 1.6 2.3V3h3.1Z"/></symbol>
+    <symbol id="i-sc" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width=".6" stroke-linejoin="round" d="M12 3.2c2.9 0 4.9 2.1 4.9 4.9v2.2l1.5-.5c.7-.2 1.2.7.5 1.1l-1.8 1c.6 1.8 1.9 3 3.6 3.5-.2.6-.9.9-2 1.1l-.4 1.1-1.5-.2c-1 0-1.8 1.4-4.8 1.4s-3.8-1.4-4.8-1.4l-1.5.2-.4-1.1c-1.1-.2-1.8-.5-2-1.1 1.7-.5 3-1.7 3.6-3.5l-1.8-1c-.7-.4-.2-1.3.5-1.1l1.5.5V8.1c0-2.8 2-4.9 4.9-4.9Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.7 6.3.9-4.55 4.45 1.07 6.27L12 17.15l-5.62 2.97 1.07-6.27L2.9 9.4l6.3-.9z"/></symbol>
+    <symbol id="i-go" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 21a8 8 0 0 1 16 0M19 4v4M17 6h4"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path fill="currentColor" d="M14 14h3v3h-3zM17 17h3v3h-3zM14 18h2v2h-2zM18 14h2v2h-2z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 7h3.5c2 0 3.3 1 4.4 2.6l2.2 3.8c1 1.7 2.4 2.6 4.4 2.6H21M3 17h3.5c1.4 0 2.5-.5 3.4-1.4M14.1 8.4c.9-.9 2-1.4 3.4-1.4H21M18 4l3 3-3 3M18 14l3 3-3 3"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+  </defs>
+</svg>
+
+<div class="bg" aria-hidden="true"></div>
+
+<main class="page">
+ <div class="side">
+  <div class="top in" style="--i:0">
+    <span class="pill"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-t="place">Bir El Djir · Oran</span></span>
+    <button class="ghost lang-btn" type="button" data-lang aria-label="Lire en arabe"><svg aria-hidden="true"><use href="#i-globe"/></svg><span data-lang-label>عربي</span></button>
+  </div>
+
+  <header class="who in" style="--i:1">
+    <h1 class="mark" translate="no">
+      <span class="mark__kicker">Herbes &amp; Épices</span>
+      <span class="mark__name">Hasnaoui</span>
+      <span class="mark__ar" lang="ar">أعشاب وتوابل حسناوي</span>
+    </h1>
+    <div class="rule" aria-hidden="true"><svg><use href="#i-leaf"/></svg></div>
+    <p class="tagline" data-t="tagline">Épices, herbes, miel naturel et fruits secs</p>
+  </header>
+
+  <nav class="social in" style="--i:2" aria-label="Contact">
+    <a href="https://wa.me/213540946688" data-wa aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+    <a href="https://www.instagram.com/epiceshasnaoui/" target="_blank" rel="noopener" aria-label="Instagram @epiceshasnaoui"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=100027690203028" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+    <a href="https://www.tiktok.com/@hasnaoui.herbs" target="_blank" rel="noopener" aria-label="TikTok @hasnaoui.herbs"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+    <a href="https://www.snapchat.com/@djaber314700" target="_blank" rel="noopener" aria-label="Snapchat djaber314700"><svg aria-hidden="true"><use href="#i-sc"/></svg></a>
+    <a href="tel:0540946688" aria-label="Appeler 0540 94 66 88"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Herbes+Hasnaoui&amp;destination_place_id=ChIJzcqhpypjfg0RNwrs723yiek" target="_blank" rel="noopener" aria-label="Itinéraire Google Maps"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJzcqhpypjfg0RNwrs723yiek" target="_blank" rel="noopener" aria-label="Laisser un avis Google"><svg aria-hidden="true"><use href="#i-star"/></svg></a>
+  </nav>
+
+  <section class="deck-wrap in" style="--i:3" aria-roledescription="carrousel" aria-label="Photos de la boutique">
+    <div class="deck" data-deck>
+      <figure class="card"><img src="img/boutique.webp" width="825" height="1100" alt="La devanture Herbes et Épices Hasnaoui avec ses paniers en osier" fetchpriority="high" style="object-position: 50% 40%"><figcaption><b data-t="c1">La boutique</b><span data-t="c1s">Bir El Djir, Oran</span></figcaption></figure>
+      <figure class="card"><img src="img/rayons.webp" width="619" height="1100" alt="Les rayons d'épices et de bocaux de la boutique" loading="lazy" style="object-position: 50% 45%"><figcaption><b data-t="c2">Des rayons pleins</b><span data-t="c2s">Épices, bocaux et mélanges</span></figcaption></figure>
+      <figure class="card"><img src="img/sachets.webp" width="619" height="1100" alt="Sachets de mélanges d'épices Hasnaoui" loading="lazy" style="object-position: 50% 40%"><figcaption><b data-t="c3">Nos mélanges</b><span data-t="c3s">Préparés et ensachés à la boutique</span></figcaption></figure>
+      <figure class="card"><img src="img/allee.webp" width="1100" height="825" alt="L'allée centrale de la boutique" loading="lazy" style="object-position: 50% 50%"><figcaption><b data-t="c4">Entrez, goûtez</b><span data-t="c4s">Conseils sur place</span></figcaption></figure>
+      <figure class="card"><img src="img/poterie.webp" width="825" height="1100" alt="Poteries et objets artisanaux en terre cuite" loading="lazy" style="object-position: 50% 35%"><figcaption><b data-t="c5">L'artisanat</b><span data-t="c5s">Terre cuite et objets de la maison</span></figcaption></figure>
+      <figure class="card"><img src="img/encens.webp" width="619" height="1100" alt="Brûle-encens en bois sculpté devant les boîtes d'épices" loading="lazy" style="object-position: 50% 45%"><figcaption><b data-t="c6">Encens et bakhour</b><span data-t="c6s">Brûle-parfums en bois</span></figcaption></figure>
+    </div>
+    <div class="deck-bar">
+      <div class="dots" data-dots aria-hidden="true"></div>
+      <button class="shuffle" type="button" data-shuffle><svg aria-hidden="true"><use href="#i-shuffle"/></svg><span data-t="shuffle">Photo suivante</span></button>
+    </div>
+  </section>
+ </div>
+
+ <div class="main">
+  <div class="links">
+    <a class="link link--main link--review in" style="--i:4" href="https://search.google.com/local/writereview?placeid=ChIJzcqhpypjfg0RNwrs723yiek" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <span class="txt"><b data-t="review">Laisser un avis</b><small data-t="reviewSub">Notez-nous sur Google</small>
+        <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link link--ig in" style="--i:5" href="https://www.instagram.com/epiceshasnaoui/" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+      <span class="txt"><b>Instagram</b><small translate="no">@epiceshasnaoui</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link link--fb in" style="--i:5" href="https://www.facebook.com/profile.php?id=100027690203028" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-fb"/></svg></span>
+      <span class="txt"><b>Facebook</b><small data-t="fbSub">Suivez-nous</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link link--tt in" style="--i:6" href="https://www.tiktok.com/@hasnaoui.herbs" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-tt"/></svg></span>
+      <span class="txt"><b>TikTok</b><small translate="no">@hasnaoui.herbs</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link link--sc in" style="--i:6" href="https://www.snapchat.com/@djaber314700" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-sc"/></svg></span>
+      <span class="txt"><b>Snapchat</b><small translate="no">djaber314700</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link in" style="--i:7" href="tel:0540946688">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+      <span class="txt"><b data-t="call">Appeler</b><small class="nums">0540 94 66 88</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+    <a class="link in" style="--i:7" href="https://www.google.com/maps/dir/?api=1&amp;destination=Herbes+Hasnaoui&amp;destination_place_id=ChIJzcqhpypjfg0RNwrs723yiek" target="_blank" rel="noopener">
+      <span class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+      <span class="txt"><b data-t="route">Itinéraire</b><small data-t="addr">Bir El Djir, Oran</small></span>
+      <svg class="go flip" aria-hidden="true"><use href="#i-go"/></svg>
+    </a>
+
+    <h2 class="shelves-h in" style="--i:8" data-t="shelvesH">Nos rayons</h2>
+    <div class="shelves in" style="--i:9">
+      <a class="shelf" href="https://wa.me/213540946688" data-wa data-msg="epices"><img src="img/epices.webp" width="619" height="1100" alt="Sachets d'épices" loading="lazy" style="object-position: 50% 35%"><div><h3 data-t="s1">Épices</h3><p data-t="s1s">Moulues et entières</p></div></a>
+      <a class="shelf" href="https://wa.me/213540946688" data-wa data-msg="herbes"><img src="img/herbes.webp" width="825" height="1100" alt="Herbes séchées, piments et citrons noirs" loading="lazy" style="object-position: 50% 40%"><div><h3 data-t="s2">Herbes &amp; mélanges</h3><p data-t="s2s">Mélanges naturels</p></div></a>
+      <a class="shelf" href="https://wa.me/213540946688" data-wa data-msg="miel"><img src="img/miel.webp" width="825" height="1100" alt="Pots de miel naturel en rayon" loading="lazy" style="object-position: 50% 40%"><div><h3 data-t="s3">Miel naturel</h3><p data-t="s3s">En pots, toutes fleurs</p></div></a>
+      <a class="shelf" href="https://wa.me/213540946688" data-wa data-msg="graines"><img src="img/gingembre.webp" width="825" height="1100" alt="Gingembre frais et graines" loading="lazy" style="object-position: 50% 70%"><div><h3 data-t="s4">Graines &amp; fruits secs</h3><p data-t="s4s">Noix, pistaches, racines</p></div></a>
+    </div>
+  </div>
+
+  <div class="tools in" style="--i:10">
+    <button class="tool" type="button" data-vcard><svg aria-hidden="true"><use href="#i-user"/></svg><span data-t="save">Enregistrer le contact</span></button>
+    <button class="tool" type="button" data-qr aria-expanded="false" aria-controls="qr"><svg aria-hidden="true"><use href="#i-qr"/></svg><span data-t="qr">QR code</span></button>
+    <button class="tool" type="button" data-share><svg aria-hidden="true"><use href="#i-share"/></svg><span data-t="share">Partager</span></button>
+  </div>
+  <div class="qr" id="qr" hidden>
+    <div class="qr__code" data-qr-box></div>
+    <p data-t="qrSub">Scannez pour ouvrir cette page</p>
+  </div>
+
+  <p class="foot in" style="--i:11">© <span data-year>2026</span> <span translate="no">Herbes &amp; Épices Hasnaoui</span> · <span data-t="foot">Bir El Djir, Oran</span></p>
+  <p class="credit in" style="--i:12" translate="no" dir="ltr"><span>Designed by <img src="img/oranova.png" width="520" height="96" alt="Oranova" loading="lazy"></span></p>
+ </div>
+</main>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script>
+(() => {
+  const root = document.documentElement;
+  const $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
+  const WA = '213540946688';
+  const AR = {
+    place: 'بئر الجير · وهران', tagline: 'توابل، أعشاب، عسل طبيعي وفواكه مجففة', shuffle: 'الصورة التالية',
+    c1: 'المحل', c1s: 'بئر الجير، وهران', c2: 'رفوف ممتلئة', c2s: 'توابل، برطمانات وخلطات', c3: 'خلطاتنا', c3s: 'محضّرة ومعبأة في المحل',
+    c4: 'ادخل وتذوّق', c4s: 'نصائح في عين المكان', c5: 'الصناعة التقليدية', c5s: 'فخار وأدوات للبيت', c6: 'البخور', c6s: 'مباخر من الخشب',
+    shelvesH: 'رفوفنا',
+    s1: 'توابل', s1s: 'مطحونة وكاملة', s2: 'أعشاب وخلطات', s2s: 'خلطات طبيعية', s3: 'عسل طبيعي', s3s: 'في برطمانات', s4: 'حبوب ومكسرات', s4s: 'جوز، فستق، جذور',
+    fbSub: 'تابعونا', call: 'اتصل', route: 'الاتجاهات', addr: 'بئر الجير، وهران', review: 'اترك تقييماً', reviewSub: 'قيّمنا على Google',
+    save: 'حفظ جهة الاتصال', qr: 'رمز QR', share: 'مشاركة', qrSub: 'امسح الرمز لفتح هذه الصفحة', foot: 'بئر الجير، وهران',
+  };
+  const MSG = {
+    fr: { hello: 'Bonjour Hasnaoui, je voudrais passer une commande.', epices: 'Bonjour Hasnaoui, je cherche des épices :', herbes: 'Bonjour Hasnaoui, je cherche des herbes / un mélange :',
+          miel: 'Bonjour Hasnaoui, je voudrais du miel naturel.', graines: 'Bonjour Hasnaoui, je cherche des graines / fruits secs :',
+          lang: 'عربي', langAria: 'Lire en arabe', copied: 'Lien copié', saved: 'Contact téléchargé' },
+    ar: { hello: 'السلام عليكم حسناوي، أريد أن أطلب.', epices: 'السلام عليكم حسناوي، أبحث عن توابل:', herbes: 'السلام عليكم حسناوي، أبحث عن أعشاب / خلطة:',
+          miel: 'السلام عليكم حسناوي، أريد عسل طبيعي.', graines: 'السلام عليكم حسناوي، أبحث عن حبوب / مكسرات:',
+          lang: 'FR', langAria: 'Lire en français', copied: 'تم نسخ الرابط', saved: 'تم تنزيل جهة الاتصال' },
+  };
+  const lang = () => (root.lang === 'ar' ? 'ar' : 'fr');
+
+  // background gradient follows the scroll: --s goes from 0 at the top to 1 at the bottom
+  let ticking = false;
+  const paint = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    root.style.setProperty('--s', max > 0 ? Math.min(1, Math.max(0, scrollY / max)).toFixed(4) : 0);
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  addEventListener('resize', paint);
+  paint();
+
+  const apply = (l) => {
+    root.lang = l; root.dir = l === 'ar' ? 'rtl' : 'ltr';
+    $$('[data-t]').forEach((el) => { if (el.dataset.fr === undefined) el.dataset.fr = el.innerHTML; el.innerHTML = l === 'ar' ? (AR[el.dataset.t] || el.dataset.fr) : el.dataset.fr; });
+    $('[data-lang-label]').textContent = MSG[l].lang;
+    $('[data-lang]').setAttribute('aria-label', MSG[l].langAria);
+    $$('[data-wa]').forEach((a) => { a.href = `https://wa.me/${WA}?text=${encodeURIComponent(MSG[l][a.dataset.msg || 'hello'])}`; a.target = '_blank'; a.rel = 'noopener'; });
+    try { localStorage.setItem('hh-lang', l); } catch (e) {}
+  };
+  apply(lang());
+  $('[data-lang]').addEventListener('click', () => apply(lang() === 'ar' ? 'fr' : 'ar'));
+
+  // photo deck: every few seconds the front photo slides off and tucks in behind the others
+  const deck = $('[data-deck]'), cards = [...deck.children], dots = $('[data-dots]');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let order = cards.map((_, i) => i), busy = false, timer;
+  cards.forEach(() => dots.appendChild(document.createElement('i')));
+  const layout = () => {
+    order.forEach((c, p) => { cards[c].dataset.p = p; cards[c].style.setProperty('--p', Math.min(p, 3)); cards[c].style.zIndex = cards.length - p; cards[c].setAttribute('aria-hidden', p ? 'true' : 'false'); });
+    [...dots.children].forEach((d, i) => d.classList.toggle('is-on', i === order[0]));
+  };
+  const next = (toLeft) => {
+    if (busy) return;
+    busy = true;
+    const front = cards[order[0]];
+    const out = toLeft !== undefined ? toLeft : root.dir === 'rtl';
+    front.classList.add('is-out'); front.classList.toggle('is-out-left', out);
+    setTimeout(() => {
+      order.push(order.shift());
+      layout();
+      front.classList.remove('is-out', 'is-out-left');
+      setTimeout(() => (busy = false), 450);
+    }, still ? 0 : 420);
+  };
+  const auto = () => { clearInterval(timer); if (!still) timer = setInterval(() => { if (!document.hidden) next(); }, 3600); };
+  layout(); auto();
+  $('[data-shuffle]').addEventListener('click', () => { next(); auto(); });
+  // tap or swipe the photo to shuffle
+  let x0 = null;
+  deck.addEventListener('pointerdown', (e) => { x0 = e.clientX; });
+  deck.addEventListener('pointerup', (e) => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; next(Math.abs(dx) > 30 ? dx < 0 : undefined); auto(); });
+  deck.addEventListener('mouseenter', () => clearInterval(timer));
+  deck.addEventListener('mouseleave', auto);
+
+  const toast = (txt) => { const t = $('[data-toast]'); t.textContent = txt; t.classList.add('is-on'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('is-on'), 2200); };
+  const pageUrl = () => location.href.split('#')[0];
+
+  // save the shop to the phone's contacts (vCard)
+  $('[data-vcard]').addEventListener('click', () => {
+    const v = ['BEGIN:VCARD', 'VERSION:3.0', 'N:;Hasnaoui;;;', 'FN:Herbes & Épices Hasnaoui', 'ORG:Herbes & Épices Hasnaoui',
+      'TEL;TYPE=CELL,PREF:+213540946688', 'ADR;TYPE=WORK:;;PC4V+65R;Bir El Djir;Oran;;Algérie', `URL:${pageUrl()}`,
+      'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/epiceshasnaoui/',
+      'X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/profile.php?id=100027690203028',
+      'X-SOCIALPROFILE;TYPE=tiktok:https://www.tiktok.com/@hasnaoui.herbs',
+      'X-SOCIALPROFILE;TYPE=snapchat:https://www.snapchat.com/@djaber314700',
+      'NOTE:Épices, herbes, mélanges naturels, miel naturel, graines et fruits secs.', 'END:VCARD'].join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([v], { type: 'text/vcard' }));
+    a.download = 'Hasnaoui.vcf'; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    toast(MSG[lang()].saved);
+  });
+
+  // QR code of this page
+  const qrBtn = $('[data-qr]'), qr = $('#qr');
+  qrBtn.addEventListener('click', () => {
+    const open = qr.hidden;
+    qr.hidden = !open; qrBtn.setAttribute('aria-expanded', open);
+    const box = $('[data-qr-box]');
+    if (open && !box.childElementCount && window.QRCode) new QRCode(box, { text: pageUrl(), width: 440, height: 440, colorDark: '#1b1411', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
+    if (open) qr.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+  });
+
+  // share, or copy the link
+  $('[data-share]').addEventListener('click', async () => {
+    const data = { title: 'Herbes & Épices Hasnaoui', text: 'Épices, herbes, miel naturel et fruits secs à Bir El Djir', url: pageUrl() };
+    try {
+      if (navigator.share) await navigator.share(data);
+      else { await navigator.clipboard.writeText(data.url); toast(MSG[lang()].copied); }
+    } catch (e) {}
+  });
+
+  $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
+})();
+</script>
+</body>
+</html>
